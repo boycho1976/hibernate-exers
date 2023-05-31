@@ -39,6 +39,13 @@ public class CommandRunner implements CommandLineRunner {
                 .password("12097381248")
                 .build();
 
+        User user1 = User.builder()
+                .firstName("John")
+                .lastName("Smith")
+                .email(UUID.randomUUID().toString()+"@gmail.com")
+                .password("5523423423")
+                .build();
+
         userRepository.save(user);
 
         Hotel hotel = Hotel.builder()
